@@ -149,8 +149,11 @@ body {
   flex-wrap: wrap;
 }
 
-/* Image: limit size and keep it from forcing extra space */
+ /* Image */
 .home-img {
+  border-radius: 40%;
+  overflow: hidden;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -165,9 +168,39 @@ body {
   height: auto;
   border-radius: 40%;
   object-fit: cover;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
   display: block;
+  position: relative;
+  z-index: 2;
+}
+ 
+.home-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 300deg,
+     #00e5ff,
+     #2979ff,
+    transparent 360deg
+  );
+  animation: borderRun 5s linear infinite;
+}
+
+.home-img::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  background: #000; 
+  border-radius: 40%;
+}
+
+
+@keyframes borderRun {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 
@@ -179,13 +212,6 @@ body {
     text-align: center;
     height: auto;
     padding: 4rem 1rem;
-  }
-
-  
-  .home-img img {
-    width: 250px;
-    height: 250px;
-    margin-top: 1.5rem;
   }
 }
 
