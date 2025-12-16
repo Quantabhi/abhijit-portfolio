@@ -250,35 +250,47 @@
     <section class="contact section" id="Contact">
       <h2 class="section-titile">Contact</h2>
       <span class="section-subtitle">Let's get in touch</span>
-
-      <div class="contact-container container grid">
-        <div class="contact-items">
-          <div class="contact-information">
-            <div class="contact-details">
-              <i class="fas fa-map-marker-alt contact-icon"></i>
-              <span class="contact-subtitle">Kolkata, India</span>
-            </div>
-          </div>
-
-          <div class="contact-information">
-            <div class="contact-details">
-              <i class="fas fa-phone contact-icon"></i>
-              <span class="contact-subtitle">+91 6290203235</span>
-            </div>
-          </div>
-
-          <div class="contact-information">
-            <div class="contact-details">
-              <i class="far fa-envelope contact-icon"></i>
-              <span class="contact-subtitle">abhijitmondal012@gmail.com</span>
-            </div>
-          </div>
-        </div>
+      <!--! Conntact from  -->
+      <div class="contact-container-second">
+        <form
+          action="https://api.web3forms.com/submit"
+          class="contact-left"
+          id="contact-form"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="b53686ca-a556-4acc-9765-8166fc3f2660"
+          />
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            class="contact-inputs"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            class="contact-inputs"
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Write something…"
+            class="contact-inputs"
+            required
+          ></textarea>
+          <button type="submit">Submit</button>
+        </form>
       </div>
+
+      <!--! end the from  -->
     </section>
 
     <!-- end section  -->
-
     <section class="footer">
       <div class="social">
         <a href="https://www.instagram.com/"
@@ -290,6 +302,12 @@
         <a href="https://in.linkedin.com/"
           ><i class="fa-brands fa-linkedin"></i
         ></a>
+        <a href="https://maps.app.goo.gl/XAjzSFs3WVWQoRci9">
+          <i class="fas fa-map-marker-alt contact-icon"></i>
+        </a>
+        <a href="mailto:abhijitmondal012@gmail.com">
+          <i class="far fa-envelope contact-icon"></i>
+        </a>
       </div>
       <div class="copyright">
         <a href="#"

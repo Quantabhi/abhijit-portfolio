@@ -511,46 +511,6 @@ body {
   color: #007bff;
 }
 
-/* contact section  */
-
-.contact-items {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  text-align: center;
-  flex-wrap: wrap;
-}
-
-.contact-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
-
-.contact-icon {
-  color: #007bff;
-  font-size: 24px;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .contact-items {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-
-  .contact-icon {
-    font-size: 22px;
-    align-items: center;
-  }
-
-  .contact-subtitle {
-    font-size: 14px;
-  }
-}
-
 .experience-img {
   display: flex;
   justify-content: center;
@@ -559,10 +519,15 @@ body {
 
 .experience-img img {
   width: 45%;
-  height: 45%;
+  height: auto;
   object-fit: cover;
 }
 
+@media screen and (max-width: 768px) {
+  .experience-img img {
+    width: 100%;
+  }
+}
 /* ===== Scroll Up Button Style ===== */
 .scrollup {
   position: fixed;
@@ -653,3 +618,66 @@ body {
     background-position: 0% 50%;
   }
 }
+
+/**Contact from  */
+
+.contact-container-second{
+  height: 45vb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.contact-left{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+
+.contact-inputs{
+  width: 400px;
+  height: 50px;
+  border: 2px solid #007bff;
+  padding-left: 25px;
+  font-weight: 500;
+  color: #666;
+  border-radius: 30px;
+}
+
+.contact-left textarea{
+  height: 140px;
+  padding-top: 15px;
+  border-radius: 30px;
+}
+
+.contact-left button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  font-size: 12px;
+  color: white;
+  gap: 10px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(270deg,#007bff);
+  cursor: pointer;
+}
+.contact-left button:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.35);
+}
+.contact-container-second button {
+  justify-content: center;
+  margin: 0 auto;
+  display: flex;
+}
+/* mobile responsive  */
+@media (max-width:800px) {
+  .contact-inputs{
+    width: 80vw;
+  }
+}
+

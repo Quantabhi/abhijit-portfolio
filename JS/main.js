@@ -47,3 +47,27 @@ document.querySelectorAll(".navbar-menu a").forEach((link) => {
     });
   });
 });
+
+
+// contact from
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      alert("Message sent successfully!");
+      form.reset(); 
+    } else {
+      alert("Something went wrong. Try again.");
+    }
+  });
