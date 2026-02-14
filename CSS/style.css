@@ -688,3 +688,13 @@ html, body {
   overflow-y: scroll;   
   scrollbar-width: none; 
 }
+
+/* footer hover  */
+.social i:hover{
+  color: black;
+}
+
+#scroll-up:hover{
+  color: black;
+}
+
