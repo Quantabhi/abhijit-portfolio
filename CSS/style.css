@@ -698,3 +698,23 @@ html, body {
   color: black;
 }
 
+.git{
+  display: flex;
+  justify-content:center ;
+}
+
+.git img{
+  padding-top: 50px;
+  width: 150vb;
+}
+
+#github{
+  padding-top: 100px;
+}
+
+@media (max-width:800px) {
+  .git{
+    display: flex;
+    width: 40vw;
+  }
+}
