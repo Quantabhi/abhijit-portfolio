@@ -134,7 +134,7 @@ function animateCursor() {
 animateCursor();
 
 // Expand follower on hoverable links
-document.querySelectorAll(".link").forEach((link) => {
+document.querySelectorAll("a, button").forEach((link) => {
   link.addEventListener("mouseenter", () => {
     cursor?.classList.add("active");
     follower?.classList.add("active");
